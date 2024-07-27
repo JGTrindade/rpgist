@@ -1,0 +1,15 @@
+.container {
+    /*opacity: 0;*/
+    /*visibility: hidden;*/
+}
+
+.wrapper {
+    width: 80%;
+    height: 400px;
+    position: absolute;
+    left: 100px;
+    top: 130px;
+    border-radius: 10px;
+    background-color: cadetblue;
+    /*z-index: -10;*/
+}

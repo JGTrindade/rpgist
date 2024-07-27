@@ -1,0 +1,10 @@
+.nav {
+  width: 70%;
+  position: relative;
+}
+
+.ul {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+}

@@ -1,0 +1,24 @@
+@import "reset.css";
+
+body {
+    color: #fff;
+}
+
+fieldset {
+    border: 0;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    margin: 7rem 0 0;
+    text-align: center;
+    font-size: 3rem;
+}
