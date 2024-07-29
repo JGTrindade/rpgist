@@ -1,6 +1,6 @@
-import styles from "./MainHeader.module.css";
+import styles from "./Header.module.css";
 
-import MainNav from "../MainHeader/MainNav/MainNav.tsx";
+import MainNav from "./MainNav/MainNav.tsx";
 import LoginButton from "../Buttons/LoginButton";
 import SignUpButton from "../Buttons/SignUpButton";
 

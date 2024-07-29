@@ -1,0 +1,16 @@
+.button {
+    position: relative;
+    padding: 10px;
+    margin-left: 40px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button::after {
+    content: "↗";
+    margin-left: 15px;
+}

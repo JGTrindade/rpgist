@@ -1,0 +1,18 @@
+.books {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.books label {
+    margin-bottom: 10px;
+}
+
+.books label input {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 10px;
+}

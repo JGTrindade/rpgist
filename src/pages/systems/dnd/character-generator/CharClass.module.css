@@ -1,0 +1,9 @@
+.arrow {
+    margin-left: 6px;
+    border: solid;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 2px;
+    transform: rotate(45deg);
+    vertical-align: middle;
+}

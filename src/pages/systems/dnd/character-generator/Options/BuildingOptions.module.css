@@ -1,0 +1,12 @@
+.buildingOptions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.fieldset {
+    margin: 0 auto;
+}
+
+.fieldset legend {
+    font-weight: 700;
+}

@@ -2,7 +2,7 @@ import styles from "./SavingThrows.module.css";
 import Save from "./Save";
 
 export default function SavingThrows() {
-    const {savingThrows, save, icon, value, ability, title} = styles;
+    const {savingThrows, title} = styles;
     return (
         <div className={savingThrows}>
             <Save name="strength"/>
