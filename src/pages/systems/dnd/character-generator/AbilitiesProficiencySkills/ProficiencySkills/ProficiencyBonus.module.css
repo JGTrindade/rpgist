@@ -1,0 +1,20 @@
+.proficiencyBonus {
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background: #ff5a5f;
+}
+
+.proficiencyBonus * {
+    display: inline-block;
+}
+
+.value{
+    font-weight: 700;
+}
+
+.title {
+    margin-left: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+}

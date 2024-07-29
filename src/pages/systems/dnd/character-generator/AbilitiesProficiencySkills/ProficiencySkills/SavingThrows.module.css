@@ -1,0 +1,15 @@
+.savingThrows {
+    padding: 10px 0;
+    font-size: 0.9rem;
+    background-color: #eee5e9;
+    color: #000;
+}
+
+.title {
+    margin: 20px 0 0;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: #cf4d6f;
+}

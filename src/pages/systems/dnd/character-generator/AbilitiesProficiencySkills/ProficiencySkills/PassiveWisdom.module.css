@@ -1,0 +1,18 @@
+.passiveWisdom {
+    text-align: center;
+    background: #ff5a5f;
+}
+
+.passiveWisdom * {
+    display: inline-block;
+}
+
+.value {
+    font-weight: 700;
+}
+
+.title {
+    margin-left: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
