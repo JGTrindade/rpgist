@@ -18,7 +18,7 @@ export default function AbilityGenerationMethod({className}: AbilityGenerationPr
             <div className={abilities}>
                 <label>
                     <input type="radio" name="attributeGenerationMethod" value="default" defaultChecked
-                           onChange={handleAbilityChoice} checked={abilityMethodChoice.abilityMethod === "default"}/>
+                           onChange={handleAbilityChoice} />
                     Standard set of scores — 15, 14, 13, 12, 10, 8 (default)
                 </label>
                 <label>

@@ -1,21 +1,20 @@
 import styles from "./CharInfoSelectionCardList.module.css";
-import {Alignment} from "../../../types/Alignment.ts";
-import {Race} from "../../../types/Race.ts";
+// import {Alignment} from "../../../types/Alignment.ts";
 import CharInfoSelectionCard from "./CharInfoSelectionCard";
 
 type CharInfoSelectionCardList = {
-    values: Array<number> | Array<Alignment> | Array<Race>,
-    componentId: string
+    values: Array<Race> // | Array<number> | Array<Alignment>
 }
 
-export default function CharInfoSelectionCardList({values, componentId}: CharInfoSelectionCardList) {
+export default function CharInfoSelectionCardList({values}: CharInfoSelectionCardList) {
     const {list, card} = styles;
 
     return (
         <ul className={list}>
-            {values.map((value) => (
-                <li className={card} key={value}><CharInfoSelectionCard componentId={componentId} raceName={value}/>
-                </li>))
+            {
+                values.map((value) => (
+                    <li className={card} key={value.name}><CharInfoSelectionCard race={value}/>
+                    </li>))
             }
         </ul>
     );

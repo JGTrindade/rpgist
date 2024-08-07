@@ -1,7 +1,7 @@
 export interface Race {
-    type: "humanoid" | monsterType
-    name: playerRace | MonsterRace;
-    subtype: playerSubtype | monsterSubtype | null;
+    type: "humanoid" | monsterType | monstersOfTheUniverseType;
+    name: playerRace | MonsterRace | MonstersOfTheMultiverseRace;
+    subtype: playerSubtype | monsterSubtype | monstersOfTheUniverseSubtype | null;
 }
 
 type monsterType =
@@ -9,7 +9,7 @@ type monsterType =
     | "celestials"
     | "dragon"
     | "elementals"
-    | "fay"
+    | "fey"
     | "fiend"
     | "giant"
     | "humanoid"
@@ -24,9 +24,7 @@ type monsterSubtype =
     | "genie"
     | "elf"
     | "goblinoid"
-    | "kobold"
     | "kuo-ta"
-    | "lizardfolk"
     | "shapechanger"
 
 type playerRace =
@@ -96,28 +94,63 @@ export type MonsterRace =
     | "ogre"
     | "oni"
     | "troll"
-    | "aarakocra"
     | "bullywug"
-    | "bugbear"
-    | "goblin"
-    | "hobgoblin"
-    | "kobold"
     | "kuo-ta"
-    | "lizardfolk"
     | "werebear"
     | "wererat"
     | "weretiger"
     | "werewolf"
-    | "centaur"
     | "doppelganger"
     | "drider"
     | "banshee"
     | "death knight"
     | "vampire"
 
-// type MonstersOfTheMultiverseRace = "";
+type MonstersOfTheMultiverseRace =
+    "aarakocra"
+    | "aasimar"
+    | "bugbear"
+    | "centaur"
+    | "changeling"
+    | "deep gnome"
+    | "duergar"
+    | "eladrin"
+    | "fairy"
+    | "firbolg"
+    | "genasi"
+    | "githyanki"
+    | "githzerai"
+    | "goblin"
+    | "goliath"
+    | "harengon"
+    | "hobgoblin"
+    | "kenku"
+    | "kobold"
+    | "lizardfolk"
+    | "minotaur"
+    | "orc"
+    | "satyr"
+    | "sea elf"
+    | "shadar-kai"
+    | "shifter"
+    | "tabaxi"
+    | "tortle"
+    | "triton"
+    | "yuan-ti"
 
-export const playerHandbookRaces: Array<Race> = [
+type monstersOfTheUniverseType =
+    "humanoid/goblinoid"
+    | "humanoid/gnome"
+    | "humanoid/dwarf"
+    | "humanoid/elf";
+
+type monstersOfTheUniverseSubtype =
+    "air"
+    | "earth"
+    | "fire"
+    | "water"
+
+const playerHandbookRaces: Array<Race> = [
     {
         type: "humanoid",
         name: "dragonborn",
@@ -175,7 +208,7 @@ export const playerHandbookRaces: Array<Race> = [
     },
 ]
 
-export const monsterManualRaces: Array<Race> = [
+const monsterManualRaces: Array<Race> = [
     {
         type: "aberrations",
         name: "aboleth",
@@ -302,7 +335,7 @@ export const monsterManualRaces: Array<Race> = [
         subtype: "genie"
     },
     {
-        type: "fay",
+        type: "fey",
         name: "dryad",
         subtype: null
     },
@@ -373,43 +406,13 @@ export const monsterManualRaces: Array<Race> = [
     },
     {
         type: "humanoid",
-        name: "aarakocra",
-        subtype: null
-    },
-    {
-        type: "humanoid",
         name: "bullywug",
         subtype: null
     },
     {
         type: "humanoid",
-        name: "bugbear",
-        subtype: "goblinoid"
-    },
-    {
-        type: "humanoid",
-        name: "goblin",
-        subtype: "goblinoid"
-    },
-    {
-        type: "humanoid",
-        name: "hobgoblin",
-        subtype: "goblinoid"
-    },
-    {
-        type: "humanoid",
-        name: "kobold",
-        subtype: "kobold"
-    },
-    {
-        type: "humanoid",
         name: "kuo-ta",
         subtype: "kuo-ta"
-    },
-    {
-        type: "humanoid",
-        name: "lizardfolk",
-        subtype: "lizardfolk"
     },
     {
         type: "humanoid",
@@ -430,11 +433,6 @@ export const monsterManualRaces: Array<Race> = [
         type: "humanoid",
         name: "werewolf",
         subtype: "shapechanger"
-    },
-    {
-        type: "monstrosities",
-        name: "centaur",
-        subtype: null
     },
     {
         type: "monstrosities",
@@ -462,3 +460,177 @@ export const monsterManualRaces: Array<Race> = [
         subtype: "shapechanger"
     }
 ]
+
+const monstersOfTheMultiverseRaces: Array<Race> = [
+    {
+        type: "humanoid",
+        name: "aarakocra",
+        subtype: null
+    },
+    {
+        type: "humanoid",
+        name: "aasimar",
+        subtype: null
+    },
+    {
+        type: "humanoid/goblinoid",
+        name: "bugbear",
+        subtype: null
+    },
+    {
+        type: "fey",
+        name: "centaur",
+        subtype: null
+    },
+    {
+        type: "fey",
+        name: "changeling",
+        subtype: null
+    },
+    {
+        type: "humanoid/gnome",
+        name: "deep gnome",
+        subtype: null
+    },
+    {
+        type: "humanoid/dwarf",
+        name: "duergar",
+        subtype: null
+    },
+    {
+        type: "humanoid/elf",
+        name: "eladrin",
+        subtype: null
+    },
+    {
+        type: "fey",
+        name: "fairy",
+        subtype: null
+    },
+    {
+        type: "humanoid",
+        name: "firbolg",
+        subtype: null
+    },
+    {
+        type: "humanoid",
+        name: "genasi",
+        subtype: "air"
+    },
+    {
+        type: "humanoid",
+        name: "genasi",
+        subtype: "earth"
+    },
+    {
+        type: "humanoid",
+        name: "genasi",
+        subtype: "fire"
+    },
+    {
+        type: "humanoid",
+        name: "genasi",
+        subtype: "water"
+    },
+    {
+        type: "humanoid",
+        name: "githyanki",
+        subtype: null
+    },
+    {
+        type: "humanoid",
+        name: "githzerai",
+        subtype: null
+    },
+    {
+        type: "humanoid/goblinoid",
+        name: "goblin",
+        subtype: null
+    },
+    {
+        type: "humanoid",
+        name: "goliath",
+        subtype: null
+    },
+    {
+        type: "humanoid",
+        name: "harengon",
+        subtype: null
+    },
+    {
+        type: "humanoid/goblinoid",
+        name: "hobgoblin",
+        subtype: null
+    },
+    {
+        type: "humanoid",
+        name: "kenku",
+        subtype: null
+    },
+    {
+        type: "humanoid",
+        name: "kobold",
+        subtype: null
+    },
+    {
+        type: "humanoid",
+        name: "lizardfolk",
+        subtype: null
+    },
+    {
+        type: "humanoid",
+        name: "minotaur",
+        subtype: null
+    },
+    {
+        type: "humanoid",
+        name: "orc",
+        subtype: null
+    },
+    {
+        type: "fey",
+        name: "satyr",
+        subtype: null
+    },
+    {
+        type: "humanoid/elf",
+        name: "sea elf",
+        subtype: null
+    },
+    {
+        type: "humanoid/elf",
+        name: "shadar-kai",
+        subtype: null
+    },
+    {
+        type: "humanoid",
+        name: "shifter",
+        subtype: null
+    },
+    {
+        type: "humanoid",
+        name: "tabaxi",
+        subtype: null
+    },
+    {
+        type: "humanoid",
+        name: "tortle",
+        subtype: null
+    },
+    {
+        type: "humanoid",
+        name: "triton",
+        subtype: null
+    },
+    {
+        type: "humanoid",
+        name: "yuan-ti",
+        subtype: null
+    },
+]
+
+export const races = [
+    playerHandbookRaces,
+    monsterManualRaces,
+    monstersOfTheMultiverseRaces
+];

@@ -1,22 +1,14 @@
 import styles from "./CharInfoSelectionCard.module.css";
+import Image from "../../../../../components/Images/Image.tsx";
 
-type CharInfoSelectionCardProps = { componentId: string, raceName: string };
-export default function CharInfoSelectionCard({componentId, raceName}: CharInfoSelectionCardProps) {
+type CharInfoSelectionCardProps = { race: { name: string; image: string; alt: string } };
+export default function CharInfoSelectionCard({race}: CharInfoSelectionCardProps) {
     const {img, basicInfo} = styles;
-
-    let imgAltText;
-    if (componentId === "charRace") {
-        imgAltText = "Character race representation";
-    } else if (componentId === "charClass") {
-        imgAltText = "Character class representation";
-    } else {
-        imgAltText = "Character race alignment";
-    }
 
     return (
         <>
-            {/*<img/> Avatar image*/}
-            <section className={basicInfo}>{raceName}</section>
+            <Image src={`/public/${race.image}`} alt={race.alt} className={img}/>
+            <section className={basicInfo}>{race.name}</section>
         </>
     );
 }
