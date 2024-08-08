@@ -1,3 +1,7 @@
+.optionsWrapper {
+    height: 500px;
+}
+
 .buildingOptions {
     display: grid;
     grid-template-columns: 1fr 1fr;

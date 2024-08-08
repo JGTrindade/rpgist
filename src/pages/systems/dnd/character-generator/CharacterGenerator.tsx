@@ -13,21 +13,21 @@ export default function CharacterGenerator() {
 
     const handleContent = selectedContent => {
         if (selectedContent === "race") {
-            setContent("Race");
+            setContent("race");
         } else if (selectedContent === "class") {
-            setContent("Class");
+            setContent("class");
         } else if (selectedContent === "alignment") {
-            setContent("Alignment");
+            setContent("alignment");
         } else {
             setContent("options")
         }
     };
 
     return (
-        <>
+        <div id='character-generator'>
             <OptionsHeader selectedMenuItem={content} onSelectedMenuItem={handleContent}/>
             <Content menuItem={content}></Content>
-        </>
+        </div>
     )
 
 }

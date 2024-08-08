@@ -1,10 +1,19 @@
 import styles from "./OptionsHeader.module.css";
+import Logo from "../../Logo.tsx";
 import TabButton from "./TabButton.tsx";
 import CharSheetButton from "./CharSheetButton.tsx";
 
-type OptionsHeaderProps = {selectedMenuItem: string; onSelectedMenuItem: (selectedItem: string) => void; TabsContainer?: string}
+type OptionsHeaderProps = {
+    selectedMenuItem: string;
+    onSelectedMenuItem: (selectedItem: string) => void;
+    TabsContainer?: string
+}
 
-export default function OptionsHeader({selectedMenuItem, onSelectedMenuItem, TabsContainer = "menu"}: OptionsHeaderProps) {
+export default function OptionsHeader({
+                                          selectedMenuItem,
+                                          onSelectedMenuItem,
+                                          TabsContainer = "menu"
+                                      }: OptionsHeaderProps) {
     const {header} = styles;
 
     const handleSelect = selectedButton => {
@@ -13,13 +22,18 @@ export default function OptionsHeader({selectedMenuItem, onSelectedMenuItem, Tab
 
     return (
         <header className={header}>
+            <Logo/>
             <TabsContainer>
-                <TabButton onSelect={() => handleSelect("options")} isSelected={selectedMenuItem === "options"}>Building options</TabButton>
-                <TabButton onSelect={() => handleSelect("race")} isSelected={selectedMenuItem === "race"}>Race</TabButton>
-                <TabButton onSelect={() => handleSelect("class")} isSelected={selectedMenuItem === "class"}>Class</TabButton>
-                <TabButton onSelect={() => handleSelect("alignment")} isSelected={selectedMenuItem === "alignment"}>Alignment</TabButton>
+                <TabButton onSelect={() => handleSelect("options")} isSelected={selectedMenuItem === "options"}>Building
+                    options</TabButton>
+                <TabButton onSelect={() => handleSelect("race")}
+                           isSelected={selectedMenuItem === "race"}>Race</TabButton>
+                <TabButton onSelect={() => handleSelect("class")}
+                           isSelected={selectedMenuItem === "class"}>Class</TabButton>
+                <TabButton onSelect={() => handleSelect("alignment")}
+                           isSelected={selectedMenuItem === "alignment"}>Alignment</TabButton>
             </TabsContainer>
             <CharSheetButton>Character Sheet</CharSheetButton>
         </header>
     );
-};
+}

@@ -17,13 +17,13 @@ export default function Content({menuItem}: ContentProps) {
 
     let charInfo = <BuildingOptions/>
     switch (menuItem) {
-        case "Race":
+        case "race":
             charInfo = <CharRace/>
             break;
-        case "Class":
+        case "class":
             charInfo = <CharClass/>
             break;
-        case "Alignment":
+        case "alignment":
             charInfo = <CharAlignment/>
             break;
         default:
