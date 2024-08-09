@@ -1,0 +1,23 @@
+.characterCreation {
+    height: 500px;
+}
+
+.methodExplanation {
+    margin-bottom: 5rem;
+}
+
+.characterCreation h1 {
+    margin: 0 0 1rem;
+}
+
+.characterCreation p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.methodSelection {
+    width: 60%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

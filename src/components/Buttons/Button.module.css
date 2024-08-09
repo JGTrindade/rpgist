@@ -1,0 +1,10 @@
+.hoverState {
+    background-color: transparent;
+    color: #fff;
+    transition: background-color .5s ease;
+}
+
+.hoverState:hover {
+    background-color: #fff;
+    color: black;
+}
