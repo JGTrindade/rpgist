@@ -1,5 +1,5 @@
 import styles from "./CharacterGenerator.module.css";
-import OptionsHeader from "./Options/OptionsHeader/OptionsHeader.tsx";
+import OptionsHeader from "./Options/OptionsHeader/CharacterSelectionHeader.tsx";
 // import Content from "./Content.tsx";
 import CharacterSelectionMethod from "./CharacterSelectionMethod.tsx";
 

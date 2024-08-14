@@ -1,4 +1,5 @@
 import styles from "./CharacterSelectionMethod.module.css"
+import {Link} from "react-router-dom";
 import Button from "../../../../components/Buttons/Button.tsx";
 
 type CharacterSelectionMethodProps = {
@@ -13,7 +14,10 @@ export default function CharacterSelectionMethod({method, explanation}: Characte
         <article className={`${wrapper} ${bgImage}`}>
             <h2>{method}</h2>
             <p>{explanation}</p>
-            <Button onClick={() => {return}} styles={{border: '1px solid #fff', textTransform: 'uppercase'}}>Create</Button>
+            <Button onClick={() => {
+                return
+            }} styles={{border: '1px solid #fff', textTransform: 'uppercase'}}><Link
+                to={`./${method.toLowerCase()}`}>Create</Link></Button>
         </article>
     );
 }

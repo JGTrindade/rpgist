@@ -22,7 +22,7 @@
 
 .automatic {
         background-image: image-set(
-            url('/classic-character-creation.jpg') 1x
+            url('/automatic-character-creation.jpg') 1x
             /*url('/classic-character-creation.jpg') 2x*/
     );
 }

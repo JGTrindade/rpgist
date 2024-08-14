@@ -1,6 +1,8 @@
 @import "reset.css";
 
 body {
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    font-family: "Caudex", serif;
     color: #fff;
 }
 
@@ -23,10 +25,13 @@ h1 {
     font-size: 3rem;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 #character-generator {
     height: 100vh;
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
-    font-family: "Caudex", serif;
     font-weight: 400;
     font-style: normal;
 }

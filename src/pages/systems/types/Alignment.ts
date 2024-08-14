@@ -1,9 +1,10 @@
 export type Alignment =
-    "lawful good"
+    "N/A"
+    | "lawful good"
     | "neutral good"
     | "chaotic good"
     | "lawful neutral"
-    | "true neutral"
+    | "neutral"
     | "chaotic neutral"
     | "lawful evil"
     | "neutral evil"
