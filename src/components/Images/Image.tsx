@@ -6,6 +6,6 @@ type ImageProps = {
     height?: number,
     loading?: "lazy" | "eager"
 };
-export default function Image({src, alt, className, width = 200, height = 200, loading = "lazy"}: ImageProps) {
-    return <img src={src} alt={alt} className={className} width={width} height={height} loading={loading}/>
+export default function Image({src, alt, className, loading = "lazy"}: ImageProps) {
+    return <img src={src} alt={alt} className={className} loading={loading}/>
 }

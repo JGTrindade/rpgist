@@ -1,9 +1,38 @@
 @import "reset.css";
+@import "dnd-character-generator.css";
 
 body {
     background-image: linear-gradient(to right, #434343 0%, black 100%);
-    font-family: "Caudex", serif;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
     color: #fff;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    padding-top: 20px;
+    font-size: 2rem;
+    font-family: "Canterbury Regular", cursive;
+    letter-spacing: 7px;
+    color: transparent;
+    background: linear-gradient(to right, #89216B, #DA4453);
+    background-clip: text;
+}
+
+header > p:first-of-type {
+    font-size: .8rem;
+}
+
+header > p:last-of-type {
+    margin-bottom: 50px;
+    font-size: 3.5rem;
+    font-family: "Canterbury Regular", cursive;
+    color: transparent;
+    background: linear-gradient(to right, #89216B, #DA4453);
+    background-clip: text;
 }
 
 fieldset {
@@ -19,19 +48,9 @@ li {
     list-style: none;
 }
 
-h1 {
-    margin: 7rem 0 0;
-    text-align: center;
-    font-size: 3rem;
-}
-
 a {
     text-decoration: none;
     color: inherit;
 }
 
-#character-generator {
-    height: 100vh;
-    font-weight: 400;
-    font-style: normal;
-}
+

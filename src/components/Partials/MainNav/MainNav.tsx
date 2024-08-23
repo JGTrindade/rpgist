@@ -9,9 +9,9 @@ export default function MainNav() {
         <nav className={nav}>
             <ul className={ul}>
                 <MainNavItem name="Systems" />
+                <MainNavItem name="Collections" />
                 <MainNavItem name="Tools" />
-                <MainNavItem name="About" />
-                <MainNavItem name="Blog" />
+                <MainNavItem name="Forums" />
             </ul>
         </nav>
     );

@@ -1,0 +1,10 @@
+.callToAction {
+    display: flex;
+    align-items: center;
+    border: 1px solid #DA4453;
+    font-size: 0.8rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    background: #DA4453;
+    color: #fff;
+}

@@ -19,7 +19,9 @@ const router = createBrowserRouter([
     {path: "signup", element: <UserForm/>},
     {path: "systems/dnd", element: <Dnd/>},
     {path: "dnd/character-generator", element: <CharacterGenerator/>},
-    {path: "dnd/character-generator/automatic", element: <Automatic/>}
+    {path: "dnd/character-generator/automatic/basic-information", element: <Automatic/>},
+    {path: "dnd/character-generator/automatic/race", element: <Automatic/>},
+    {path: "dnd/character-generator/automatic/class", element: <Automatic/>}
 ]);
 
 export default function App() {

@@ -1,0 +1,29 @@
+.buttonItem {
+    width: 33.3%;
+    display: inline-block;
+    line-height: 3;
+    text-align: center;
+}
+
+.button {
+    padding: 0 20px;
+    border: 1px solid transparent;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.button:hover {
+    border-color: darkgrey;
+    border-radius: 30px;
+    transition: all .3s ease;
+}
+
+.button.selected {
+    border: none;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    border-radius: 30px;
+}

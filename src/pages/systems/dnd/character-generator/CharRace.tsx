@@ -1,4 +1,3 @@
-// import Dropdown from "@/app/dnd/character-generator/Dropdown";
 import CharInfoSelectionCardList from "./CharInfoSelectionCard/CharInfoSelectionCardList.tsx";
 import {
     playerHandbookRaces,
@@ -6,40 +5,25 @@ import {
     monstersOfTheMultiverseRaces,
     createCompleteRace
 } from '../../../../assets/js/races.js';
-import {useContext} from "react";
-import {ContentContext} from "../../store/dnd-character-generator-context.tsx";
 
 export default function CharRace() {
 
-    const raceChoice = useContext(ContentContext);
+    const races = [
+        ...createCompleteRace(playerHandbookRaces),
+        ...createCompleteRace(monsterManualRaces),
+        ...createCompleteRace(monstersOfTheMultiverseRaces)
+    ];
 
-    const componentId = "charRace";
-
-    let allRaces: Array<Race> = [];
-
-    if (!raceChoice.bookIsSelected.monsterManual && !raceChoice.bookIsSelected.monstersOfTheMultiverse) {
-
-        allRaces = [...createCompleteRace(playerHandbookRaces)];
-
-    } else if (raceChoice.bookIsSelected.monsterManual && !raceChoice.bookIsSelected.monstersOfTheMultiverse) {
-
-        const playerRaces = [...createCompleteRace(playerHandbookRaces)];
-        const monsterRaces = [...createCompleteRace(monsterManualRaces)];
-        allRaces = [...playerRaces, ...monsterRaces];
-
-    } else if (raceChoice.bookIsSelected.monstersOfTheMultiverse && !raceChoice.bookIsSelected.monsterManual) {
-
-        const playerRaces = [...createCompleteRace(playerHandbookRaces)];
-        const multiverseRaces = [...createCompleteRace(monstersOfTheMultiverseRaces)];
-        allRaces = [...playerRaces, ...multiverseRaces];
-
-    } else {
-        const playerRaces = [...createCompleteRace(playerHandbookRaces)];
-        const monsterRaces = [...createCompleteRace(monsterManualRaces)];
-        const multiverseRaces = [...createCompleteRace(monstersOfTheMultiverseRaces)];
-        allRaces = [...playerRaces, ...monsterRaces, ...multiverseRaces];
-    }
-
-    return <CharInfoSelectionCardList componentId={componentId} values={allRaces}/>
-    //return <Dropdown name="charRace" title="Race" values={raceNames}/>
+    return (
+        <>
+            <aside className="text">
+                <h2 className="heading">Race</h2>
+                <p className="explanation">In this section you can choose your character’s race.<br/>Currently,
+                    the supported races are those available in the<br/>Player’s Handbook, the Monster Manual and the
+                    Monsters of the Multiverse.
+                </p>
+            </aside>
+            <CharInfoSelectionCardList values={races}/>
+        </>
+    )
 }

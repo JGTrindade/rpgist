@@ -17,5 +17,11 @@ export default function CharClass() {
         "wizard"
     ]
 
-    return <Dropdown name="charClass" title="Class" values={classes}/>
+    return (
+        <>
+            <h2 className="heading">Class</h2>
+            <Dropdown name="charClass" title="Class" values={classes}/>
+        </>
+    )
 }
+

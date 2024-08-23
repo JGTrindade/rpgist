@@ -7,8 +7,10 @@ export default function CharInfoSelectionCard({race}: CharInfoSelectionCardProps
 
     return (
         <>
-            <Image src={`/public/${race.image}`} alt={race.alt} className={img}/>
-            <section className={basicInfo}>{race.name}</section>
+            <Image src={`/public/img/${race.image}`} alt={race.alt} className={img}/>
+            <section className={basicInfo}>
+                <p>{race.name.toUpperCase()}</p>
+            </section>
         </>
     );
 }

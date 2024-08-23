@@ -4,7 +4,11 @@
 }
 
 .ul {
-  display: flex;
+  /*display: flex;*/
   position: relative;
   justify-content: space-around;
+}
+
+.ul li {
+  display: inline-block;
 }

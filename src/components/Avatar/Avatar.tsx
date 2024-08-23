@@ -6,7 +6,7 @@ export default function Avatar() {
 
     return (
         <IconBackground>
-            <img src="/dumb-avatar.jpg" alt="User avatar" width="30" height="30" className={avatar}/>
+            <img src="/img/dumb-avatar.jpg" alt="User avatar" width="30" height="30" className={avatar}/>
         </IconBackground>
     );
 }

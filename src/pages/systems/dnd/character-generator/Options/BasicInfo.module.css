@@ -1,0 +1,39 @@
+.basicInfo {
+    text-align: center;
+}
+
+.basicInfo label {
+    font-size: .9rem;
+}
+
+.name, .alignmentLevel {
+    display: flex;
+    margin-bottom: 5rem;
+    justify-content: space-evenly;
+}
+
+.name input {
+    width: 300px;
+    font-size: 2.5rem;
+}
+
+.basicInfo div:nth-child(3) input {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.basicInfo select {
+    display: block;
+    margin: 10px 0 0;
+    border-width: 2px;
+    padding: 10px;
+    background-color: transparent;
+    color: #ff5a5f;
+}
+
+.basicInfo input {
+    color: #ff5a5f;
+    font-style: italic;
+}

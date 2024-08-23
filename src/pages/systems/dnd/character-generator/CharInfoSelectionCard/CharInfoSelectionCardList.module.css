@@ -1,14 +1,24 @@
 .list {
     display: grid;
-    width: 80%;
     margin: 0 auto;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    background-color: #cf4d6f;
+    grid-template-columns: repeat(3, 25%);
+    grid-column-gap: 12.5%;
+    grid-row-gap: 20px;
 }
 
 .card {
+    height: 350px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 2px solid #505050;
     border-radius: 10px;
-    background-color: #5B7C99;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card:hover p {
+    color: #ff5a5f;
+}
+
+.card:hover img {
+    transform: scale(1.1);
 }

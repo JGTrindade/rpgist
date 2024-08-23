@@ -1,5 +1,5 @@
 import styles from "./Modal.module.css";
-import BuildingOptions from "./Options/BuildingOptions.tsx";
+import BuildingOptions from "./Options/BasicInfo.tsx";
 import CharClass from "./CharClass.tsx";
 import CharLevel from "./CharLevel.tsx";
 import CharRace from "./CharRace.tsx";

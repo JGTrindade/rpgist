@@ -1,45 +1,34 @@
 import styles from "./Content.module.css";
-import BuildingOptions from "./Options/BuildingOptions.tsx";
+import React from "react";
+import {useLocation} from "react-router-dom";
+
+import BasicInfo from "./Options/BasicInfo.tsx";
 import CharRace from "./CharRace.tsx";
 import CharClass from "./CharClass.tsx";
-import CharAlignment from "./CharAlignment.tsx";
-// import CharAlignment from "@/app/dnd/character-generator/CharAlignment";
 
-import {useState} from "react";
-import {ContentContext} from "../../store/dnd-character-generator-context.tsx";
-
-type ContentProps = { menuItem: string }
-export default function Content({menuItem}: ContentProps) {
+// type ContentProps = { menuItem: React.ReactNode }
+export default function Content() {
     const {content} = styles;
 
-    const [bookIsSelected, setBookIsSelected] = useState({monsterManual: false, monstersOfTheMultiverse: false});
-    const [abilityMethod, setAbilityMethod] = useState("default");
+    const location = useLocation();
+    const currentPath = location.pathname;
+    console.log(currentPath)
 
-    let charInfo = <BuildingOptions/>
-    switch (menuItem) {
-        case "race":
-            charInfo = <CharRace/>
+    let contentType = <BasicInfo/>
+    switch (currentPath) {
+        case "/dnd/character-generator/automatic/race":
+            contentType = <CharRace/>
             break;
-        case "class":
-            charInfo = <CharClass/>
-            break;
-        case "alignment":
-            charInfo = <CharAlignment/>
+        case "/dnd/character-generator/automatic/class":
+            contentType = <CharClass/>
             break;
         default:
-            charInfo = <BuildingOptions/>
+            contentType = <BasicInfo/>
     }
 
-    const value = {
-        bookIsSelected,
-        setBookIsSelected,
-        abilityMethod,
-        setAbilityMethod
-    }
-
-    return <ContentContext.Provider value={value}>
+    return (
         <main className={content}>
-            {charInfo}
+            {contentType}
         </main>
-    </ContentContext.Provider>
+    )
 }

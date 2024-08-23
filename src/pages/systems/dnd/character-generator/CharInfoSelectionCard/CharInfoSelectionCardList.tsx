@@ -1,9 +1,8 @@
 import styles from "./CharInfoSelectionCardList.module.css";
-// import {Alignment} from "../../../types/Alignment.ts";
 import CharInfoSelectionCard from "./CharInfoSelectionCard";
 
 type CharInfoSelectionCardList = {
-    values: Array<Race> // | Array<number> | Array<Alignment>
+    values: Array<Race> // | Array<number>
 }
 
 export default function CharInfoSelectionCardList({values}: CharInfoSelectionCardList) {
