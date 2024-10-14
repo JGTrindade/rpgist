@@ -1,29 +1,29 @@
 import styles from "./Content.module.css";
-import React from "react";
-import {useLocation} from "react-router-dom";
+
+import React, { useState } from "react";
 
 import BasicInfo from "./Options/BasicInfo.tsx";
 import CharRace from "./CharRace.tsx";
 import CharClass from "./CharClass.tsx";
 
-// type ContentProps = { menuItem: React.ReactNode }
-export default function Content() {
+type ContentProps = { menuItem: React.ReactNode }
+export default function Content({menuItem}: ContentProps) {
     const {content} = styles;
 
-    const location = useLocation();
-    const currentPath = location.pathname;
-    console.log(currentPath)
+    const [basicInfoData, setBasicInfoData] = useState({name: '', surname: ''});
+    const [charRaceData, setCharRaceData] = useState({});
+    const [charClassData, setCharClassData] = useState({});
 
-    let contentType = <BasicInfo/>
-    switch (currentPath) {
-        case "/dnd/character-generator/automatic/race":
-            contentType = <CharRace/>
+    let contentType = <BasicInfo data={basicInfoData} setData={setBasicInfoData}/>
+    switch (menuItem) {
+        case "race":
+            contentType = <CharRace data={charRaceData} setData={setCharRaceData}/>
             break;
-        case "/dnd/character-generator/automatic/class":
-            contentType = <CharClass/>
+        case "class":
+            contentType = <CharClass data={charClassData} setData={setCharClassData}/>
             break;
         default:
-            contentType = <BasicInfo/>
+            contentType = <BasicInfo data={basicInfoData} setData={setBasicInfoData}/>
     }
 
     return (

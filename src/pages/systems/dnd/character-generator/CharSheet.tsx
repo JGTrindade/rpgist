@@ -1,16 +1,14 @@
 import styles from "./CharSheet.module.css";
-import LifeMovementEquipment from "./LifeMovementEquipment/LifeMovementEquipment";
-import AbilitiesProficienciesSkills from "./AbilitiesProficiencySkills/AbilitiesProficienciesSkills";
-import TraitsIdealsBondsFlaws from "./TraitsIdealsBondsFlaws/TraitsIdealsBondsFlaws";
+import CharacterSheet from "../assets/sheet.svg";
 
-export default function CharSheet() {
-    const {charSheet} = styles;
+const CharSheet = () => {
+  const { charSheet } = styles;
 
-    return (
-        <main className={charSheet}>
-            <AbilitiesProficienciesSkills/>
-            <LifeMovementEquipment/>
-            <TraitsIdealsBondsFlaws/>
-        </main>
-    )
-}
+  return (
+    <div className={charSheet}>
+      <img src={CharacterSheet} alt="D&D Character Sheet" />
+    </div>
+  );
+};
+
+export default CharSheet;

@@ -17,7 +17,7 @@ export default function CharacterSelectionMethod({method, explanation}: Characte
             <Button onClick={() => {
                 return
             }} styles={{border: '1px solid #fff', textTransform: 'uppercase'}}><Link
-                to={`./${method.toLowerCase()}/basic-information`}>Create</Link></Button>
+                to={`./${method.toLowerCase()}`}>Create</Link></Button>
         </article>
     );
 }

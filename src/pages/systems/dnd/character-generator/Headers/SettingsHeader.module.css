@@ -1,7 +1,13 @@
 
 .settingsHeader {
-    height: 50px;
+    height: 700px;
     padding: 0;
     border-radius: 30px;
-    background: linear-gradient(to right, #89216B, #DA4453);
+    background: linear-gradient(to right, rgba(137, 33, 107, 0.5), rgba(218, 68, 83, 0.5));
+}
+
+.charGen {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
 }
