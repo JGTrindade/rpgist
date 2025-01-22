@@ -1,0 +1,9 @@
+.mainNav {
+  grid-column: 2;
+  align-content: center;
+}
+
+.mainNav ul {
+  display: flex;
+  justify-content: space-evenly;
+}

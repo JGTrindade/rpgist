@@ -1,0 +1,4 @@
+.mainHeader {
+    display: grid;
+    grid-template-columns: 22% 78%;
+}

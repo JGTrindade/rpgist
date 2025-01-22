@@ -1,0 +1,13 @@
+.charList {
+  margin-top: 30px;
+  flex-basis: 100%;
+  list-style: none;
+}
+
+.charList li {
+  border-radius: 25px;
+}
+
+.charList li.active {
+  background: linear-gradient(to right, #1565c0, #b92b27);
+}

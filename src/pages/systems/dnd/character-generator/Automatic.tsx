@@ -4,6 +4,8 @@ import React, { useState } from "react";
 
 import SettingsHeader from "./Headers/SettingsHeader.tsx";
 import Content from "./Content.tsx";
+import Header from "../../../../components/Header.tsx";
+import MainHeading from "../../../../components/MainHeading.tsx";
 
 export default function Automatic() {
     const {contentWrapper} = styles;
@@ -14,11 +16,8 @@ export default function Automatic() {
 
     return (
         <>
-            <header>
-                <h1>Nyxhemerium</h1>
-                <p>A character generator for</p>
-                <p>Dungeons & Dragons</p>
-            </header>
+            <Header/>
+            <MainHeading/>
             <div className={contentWrapper}>
                 <SettingsHeader onSelectedMenuItem={handleMenuItem} selectedMenuItem={menuItem}/>
                 <Content menuItem={menuItem}/>

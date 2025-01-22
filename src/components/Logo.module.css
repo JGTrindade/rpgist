@@ -2,8 +2,3 @@
     font-family: "Canterbury Regular";
     src: url("/public/fonts/canterbury-regular.woff2") format("woff2");
 }
-
-.contentWrapper {
-    width: 80%;
-    margin: 130px auto 0;
-}

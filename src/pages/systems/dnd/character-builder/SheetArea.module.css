@@ -1,0 +1,11 @@
+.main {
+  display: flex;
+  grid-column: 4;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  background-color: #fff;
+  color: #000;
+}
