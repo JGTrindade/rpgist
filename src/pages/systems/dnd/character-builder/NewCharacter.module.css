@@ -9,11 +9,6 @@
 
 .charWrapper:hover {
   border-radius: 25px;
-  border-image: linear-gradient(
-    135deg,
-    rgb(65, 209, 255) 0%,
-    rgb(255, 165, 0) 100%
-  );
   border-image-slice: 1;
   transition: box-shadow 0.3s ease;
 }

@@ -1,5 +1,5 @@
 import styles from "./NewCharacter.module.css";
-import { Character } from "../types/Character";
+import { Character } from "./types/Character";
 
 export default function NewCharacter({ name, role, level }: Character) {
   const {charWrapper} = styles;

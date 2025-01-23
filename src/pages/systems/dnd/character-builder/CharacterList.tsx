@@ -1,19 +1,11 @@
 import styles from "./CharacterList.module.css";
 import { Character } from "./types/Character";
+import { useCharacterContext } from "../contexts/CharacterContext";
 import NewCharacter from "./NewCharacter";
 
-interface CharacterListProps {
-  characters: Character[];
-  onSelectCharacter: (char: Character) => void;
-  selectedCharacter: Character | null;
-}
-
-export default function CharacterList({
-  characters,
-  onSelectCharacter,
-  selectedCharacter,
-}: CharacterListProps) {
+export default function CharacterList() {
   const { charList, active } = styles;
+  const { characters, onSelectCharacter, selectedCharacter } = useCharacterContext();
 
   const handleSelection = (character: Character) => {
     onSelectCharacter(character);
@@ -21,7 +13,7 @@ export default function CharacterList({
 
   return (
     <ul className={charList}>
-      {characters.map((character) => (
+      {characters.map((character: Character) => (
         <li
           key={character.id}
           onClick={() => handleSelection(character)}

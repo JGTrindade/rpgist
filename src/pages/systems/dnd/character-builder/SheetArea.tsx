@@ -1,21 +1,12 @@
-import { Character } from "./types/Character";
-
 import styles from "./SheetArea.module.css";
+import { useCharacterContext } from "../contexts/CharacterContext";
 import AddCharacter from "./buttons/AddCharacter";
 import MainCharacter from "./MainCharacter";
 
-interface SheetAreaProps {
-  characterList: Array<Character>;
-  character: Character | null;
-  loading: boolean;
-}
-
-export default function SheetArea({
-  characterList,
-  character,
-  loading,
-}: SheetAreaProps) {
+export default function SheetArea() {
   const { main } = styles;
+
+  const { characters, selectedCharacter, loading } = useCharacterContext();
 
   if (loading) {
     return (
@@ -25,19 +16,19 @@ export default function SheetArea({
     );
   }
 
-  if (characterList.length === 0) {
+  if (characters.length === 0) {
     return (
       <main className={main}>
         <h2>No Character Selected</h2>
         <p>You currently don’t have any characters.</p>
-        <AddCharacter style={{marginTop: "20px"}} />
+        <AddCharacter style={{ marginTop: "20px" }} />
       </main>
     );
   }
 
   return (
     <main className={main}>
-      <MainCharacter character={character} />
+      <MainCharacter character={selectedCharacter} />
     </main>
   );
 }

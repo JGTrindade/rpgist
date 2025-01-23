@@ -3,7 +3,7 @@ import json
 
 # Mock data: Replace this with a database or other data source in the future
 characters = [
-    {"id": 1, "name": "Sid von Pierce", "role": "Bard", "level": 12},
+    {"id": 1, "name": "Sid von Pierce", "role": "Bard", "level": 13},
     {"id": 2, "name": "Dárdanos de Logos", "role": "Cleric", "level": 19}
 ]
 
